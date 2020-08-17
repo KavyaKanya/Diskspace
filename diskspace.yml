@@ -1,4 +1,4 @@
 - hosts: all
   tasks:
-  -name: Test Drive
+  - name: Test Drive
     win_shell: cd "C:\Users\aspnurali\Desktop"
