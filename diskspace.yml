@@ -1,9 +1,6 @@
 - hosts: all
   tasks:
 
-- name: Partition Size
-    win_shell: "$size = (Get-PartitionSupportedSize -DriveLetter G"
-    
-- name: Resize
-    win_shell: "Resize-Partition -DriveLetter G -Size $size.SizeMax"
+ - name: Run a script
+    win_shell: C:\Users\aspnurali\Desktop\Diskspace.ps1
     
