@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+
+- name: Partition Size
+    win_shell: "$size = (Get-PartitionSupportedSize -DriveLetter G"
+    
+- name: Resize
+    win_shell: "Resize-Partition -DriveLetter G -Size $size.SizeMax"
+    
