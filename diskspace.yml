@@ -1,3 +1,4 @@
-- hosts: all  tasks:
+- hosts: all  
+tasks:
    - name: Resize
      win_shell: "Resize-Partition -DriveLetter G -Size $(Get-PartitionSupportedSize -DriveLetter G).SizeMax"
