@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
   - name: Rescan
-    win_shell: diskpart rescan
+    win_shell: echo rescan | diskpart
   - name: Resize
     win_shell: "Resize-Partition -DriveLetter G -Size $(Get-PartitionSupportedSize -DriveLetter G).SizeMax"
